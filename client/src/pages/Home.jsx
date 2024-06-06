@@ -68,40 +68,25 @@ export default function Home() {
         </Link>
       </div>
 
-      {/* swiper */}
-      {/* <Swiper navigation>
+   
+
+{/* 
+<Swiper navigation modules={[Navigation]} className='animate-fade-in'>
         {offerListings &&
           offerListings.length > 0 &&
           offerListings.map((listing) => (
             <SwiperSlide key={listing._id}>
-              <div
-                style={{
-                  background: `url(${listing.imageUrls[0]}) center no-repeat`,
-                  backgroundSize: 'cover',
-                }}
-                className='h-[500px]'
-                key={listing._id}
-              ></div>
+              <div className='h-[500px] w-full flex items-center justify-center'>
+                <img
+                  src={listing.imageUrls[0]}
+                  alt='listing cover'
+                  className='h-full w-full object-contain hover:scale-105 transition-transform duration-300'
+                />
+              </div>
             </SwiperSlide>
           ))}
-      // </Swiper> */}
+      </Swiper> */}
 
-
-<Swiper navigation>
-  {offerListings &&
-    offerListings.length > 0 &&
-    offerListings.map((listing) => (
-      <SwiperSlide key={listing._id}>
-        <div
-          style={{
-            background: `url(${listing.imageUrls[0]}) center/contain no-repeat`,
-          }}
-          className="h-[500px] w-full"
-          key={listing._id}
-        ></div>
-      </SwiperSlide>
-    ))}
-</Swiper>
 
 
       {/* listing results for offer, sale and rent */}
